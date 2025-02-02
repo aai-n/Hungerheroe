@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelter Information</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+    border-radius: 8px;
+    color: #ad1457;
+    size: 100%;
+
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8bbd0, #ce93d8);
+  color: #4a148c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.heading {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #d81b60;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #6a1b9a;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #ce93d8;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #d81b60;
+}
+
+.submit-btn {
+  background: #d81b60;
+  color: #fff;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ad1457;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url(https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?cs=srgb&dl=basil-delicious-food-459469.jpg&fm=jpg) no-repeat center center/cover;
+  color: #4a148c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Shelter Information</h1>
+    <form id="shelter-form">
+      <label for="name">Shelter Name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" required>
+      
+      <label for="food">Food Available</label>
+      <input type="text" id="food" name="food" required>
+      
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+      
+      <label for="contact">Contact Info</label>
+      <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required>
+      
+      <button onclick="window.location.href='submit.html'">Submit</button>
+
+    </form>
+  </div>
+  <script src="script3.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+   
+    --glass-bg: rgba(65, 63, 63, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    
+}
+
+/* Apply New Background Image */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+    ;
+    font-family: 'Brush Script MT',cursive;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Main Content */
+main {
+    width: 85%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Form Section */
+#restaurant-form {
+    background: url('https://images.unsplash.com/photo-1578593470990-1cde71ef1c89') no-repeat center/cover;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+h2 {
+    color: rgb(7, 5, 1);
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    
+}
+
+/* Styled Input Fields */
+input {
+    width: 80%;
+    margin: 12px 0;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    background: var(--glass-bg);
+    color: var(--text-color);
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--glass-border);
+    transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+    outline: none;
+    border: 2px solid var(--secondary-color);
+}
+.food{
+    text-decoration: #1a1a1a;
+}
+a{
+    text-align: left;
+    font-style: oblique;
+    background-color: orange;
+    border-radius: 40px;
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <section class="food">
+            <h2>RESTAURANT: LIST LEFTOVER FOOD</h2>
+            <a href="home.html">Home</a>
+            <form id="foodForm">
+                <input type="text" id="restaurant-name" placeholder ="Restaurant Name" required style>
+                <input type="text" id="food-details" placeholder="Food Details" required>
+                <input type="text" id="location" placeholder="Location" required>
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+    </main>
+    <script src="restaurant.js"></script>
+</body>
+</html>

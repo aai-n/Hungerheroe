@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Pickup Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390);
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #6a0572;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1.5s;
+}
+
+.restaurant-card {
+  background: white;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-name {
+  font-size: 1.8rem;
+  color: #d81b60;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+
+.pickup-btn {
+  background: #f77f00;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.pickup-btn:hover {
+  background: #ff6700;
+}
+
+/* Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title">Nearby Restaurants & Pickup Options</h1>
+
+    <div class="restaurant-card bounce">
+      <h2 class="restaurant-name">Gourmet Delight</h2>
+      <p class="description">Serving fresh meals with love and care.</p>
+      <button class="pickup-btn">Select for Pickup</button>
+    </div>
+
+    <div class="restaurant-card">
+      <h2 class="restaurant-name">The Italian Corner</h2>
+      <p class="description">Authentic Italian flavors waiting for you.</p>
+      <button class="pickup-btn">Select for Pickup</button>
+    </div>
+
+    <div class="restaurant-card bounce">
+      <h2 class="restaurant-name">Green Goodness Cafe</h2>
+      <p class="description">Healthy and sustainable meal options.</p>
+      <button class="pickup-btn">Select for Pickup</button>
+    </div>
+  </div>
+
+  <script src="submit.js"></script>
+</body>
+</html>
